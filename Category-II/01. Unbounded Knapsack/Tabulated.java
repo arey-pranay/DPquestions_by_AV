@@ -9,7 +9,7 @@ public class KnapsackTabulated {
                     dp[i][w] = 0;
                 } else if (weights[i-1] <= w) {
                     dp[i][w] = Math.max(
-                        values[i-1] + dp[i-1][w - weights[i-1]],
+                        values[i-1] + dp[i][w - weights[i-1]],
                         dp[i-1][w]
                     );
                 } else {
