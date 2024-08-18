@@ -16,7 +16,7 @@ class Solution {
         // now to memoize, I need to consider how many variables are changing in the function call, because then they define the "state" of a problem, i.e., a proper subproblem
         // in this case, the i changes in each call, and W changes whenever we take the ith element, so 2 variables, so 2 dimensions, so that we can have answers for all pairs of i and W
 
-        int[][] memo = new int[W+1][wt.length+1]; //wt.length+1 because we are checking i+1 every time, so if last+1 index does not exist in memo[W] in the last call we will get an exception of ArrayIndexOutOfBounds
+        int[][] memo = new int[W+1][wt.length+1]; //+1 because we are checking ith index every time, the last index index for size=4, is 3, therefore to access 4th index, we need 4+1 i.e., size = 5. Otherwise the ith index does not exist in memo[W] in the last call we will get an exception of ArrayIndexOutOfBounds
         for(int[] arr : memo) Arrays.fill(arr,-1);
         return func(W, wt, val, 0, memo);
     }
@@ -49,5 +49,7 @@ class Solution {
         int notTake = rec(W, wt, val, i+1);
         
         return Math.max(take ,notTake);
-    }   
+    }
+    
+    
 }
