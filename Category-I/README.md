@@ -9,3 +9,5 @@
 
 #### 04. Number of Subsets in Subset Sum Problem
 - https://www.naukri.com/code360/problems/count-subsets-with-sum-k_3952532
+
+#### 05. Subset Sum With Min Difference
