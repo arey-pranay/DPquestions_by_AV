@@ -38,5 +38,5 @@ else j--
 - For converting A to B, turn a to LCS, by deleting. => Deletions = A.length() - lcs(A,B)
 - Then convert to obtained string to B, by inserting. => Insertions = B.length() - lcs(A,B)
 
+#### 6. Longest Palindromic Subsequence
 
-  
