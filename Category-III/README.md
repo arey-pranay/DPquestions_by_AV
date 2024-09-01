@@ -9,6 +9,7 @@ else dp[i][j] = Math.max(dp[i-1][j],dp[i][j-1])
 #### 2. Length of Longest Common Substring
 
 - Create a separate variable that will be returned at the end by the function, because we'll have to reset the dp[i][j] table as substring needs to be consecutive, unlike subsequence
+
 int maxLength = 0;
 
 ```
